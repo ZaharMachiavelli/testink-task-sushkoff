@@ -80,7 +80,8 @@ export default {
       activeGood.value = {} as IProduct;
     }
 
-    async function submitGoods() {
+    async function submitGoods(e: any) {
+      e.preventDefault();
       try {
         const response = await axios.post(
           "https://dev-su.eda1.ru/test_task/save.php",
